@@ -2,6 +2,7 @@ from random import randint
 
 
 class Coin:
+    name: str = "ABC"
 
     def __init__(self) -> None:
         self.side: bool = True
