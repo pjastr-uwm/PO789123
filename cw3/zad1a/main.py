@@ -1,6 +1,6 @@
 class Person:
     name: str = ""
-    surname:str = ""
+    surname: str = ""
 
 
 p1 = Person()

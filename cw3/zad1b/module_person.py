@@ -1,3 +1,3 @@
 class Person:
     name: str = ""
-    surname:str = ""
+    surname: str = ""
