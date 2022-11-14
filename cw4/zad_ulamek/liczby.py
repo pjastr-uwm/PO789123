@@ -44,4 +44,11 @@ class Wymierna:
 
         return (self.p == other.p) and (self.q == other.q)
 
+    # def __ne__(self, other: Wymierna) -> bool:  # type: ignore[override]
+    #     return (self.p != other.p) or (self.q != other.q)
 
+    def __ne__(self, other: object) -> bool:
+        if not isinstance(other, Wymierna):
+            return NotImplemented
+
+        return (self.p != other.p) or (self.q != other.q)
