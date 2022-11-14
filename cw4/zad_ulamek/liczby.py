@@ -34,3 +34,14 @@ class Wymierna:
 
     def __add__(self, other: Wymierna) -> Wymierna:
         return Wymierna(self.p * other.q+self.q * other.p, self.q * other.q)
+
+    # def __eq__(self, other: Wymierna) -> bool: # type: ignore[override]
+    #     return (self.p == other.p) and (self.q == other.q)
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Wymierna):
+            return NotImplemented
+
+        return (self.p == other.p) and (self.q == other.q)
+
+

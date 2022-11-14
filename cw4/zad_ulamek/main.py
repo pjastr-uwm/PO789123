@@ -12,6 +12,11 @@ def main() -> None:
     print(float(w2))
     w3: Wymierna = Wymierna(2, 3)
     print(w2+w3)
+    print(w2 == w3)
+    w4: Wymierna = Wymierna(4, 6)
+    print(w3 == w4)
+    print(w3 != w4)
+
 
 
 if __name__ == "__main__":
