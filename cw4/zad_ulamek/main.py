@@ -20,6 +20,10 @@ def main() -> None:
     print(w2 <= w3)
     print(w2 > w3)
     print(w2 >= w3)
+    a1: Wymierna = Wymierna(1, 3)
+    a2: Wymierna = Wymierna(27, 2)
+    print(a1 * a2)
+    print(a1 / a2)
 
 
 if __name__ == "__main__":
