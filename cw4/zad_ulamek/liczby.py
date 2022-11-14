@@ -6,6 +6,9 @@ class Wymierna:
     q: int
 
     def __init__(self, p: int, q: int) -> None:
+        if q == 0:
+            raise ValueError("Mianownik nie może być równy zero!")
+
         self.p = p
         self.q = q
         if gcd(self.p, self.q) != 1:

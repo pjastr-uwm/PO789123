@@ -1,8 +1,8 @@
 from liczby import Wymierna
 
 
-def main():
-    w1: Wymierna = Wymierna(-6, -4)
+def main() -> None:
+    w1: Wymierna = Wymierna(-6, 3)
     print(w1)
 
 
