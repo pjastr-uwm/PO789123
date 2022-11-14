@@ -16,7 +16,10 @@ def main() -> None:
     w4: Wymierna = Wymierna(4, 6)
     print(w3 == w4)
     print(w3 != w4)
-
+    print(w2 < w3)
+    print(w2 <= w3)
+    print(w2 > w3)
+    print(w2 >= w3)
 
 
 if __name__ == "__main__":

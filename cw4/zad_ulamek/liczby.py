@@ -52,3 +52,15 @@ class Wymierna:
             return NotImplemented
 
         return (self.p != other.p) or (self.q != other.q)
+
+    def __lt__(self, other: Wymierna) -> bool:
+        return self.p*other.q < self.q*other.p
+
+    def __le__(self, other: Wymierna) -> bool:
+        return self.p*other.q <= self.q*other.p
+
+    def __gt__(self, other: Wymierna) -> bool:
+        return self.p*other.q > self.q*other.p
+
+    def __ge__(self, other: Wymierna) -> bool:
+        return self.p*other.q >= self.q*other.p
