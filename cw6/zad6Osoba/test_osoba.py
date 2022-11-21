@@ -7,6 +7,7 @@ def main() -> None:
     o1.nazwisko = "Nowak"
     print(o1.nazwisko)
     print(o1.rok_urodzenia)
+    print(o1)
 
 
 if __name__ == "__main__":

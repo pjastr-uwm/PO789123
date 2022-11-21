@@ -31,3 +31,7 @@ class Osoba:
     @rok_urodzenia.deleter
     def rok_urodzenia(self) -> None:
         raise AttributeError("Nie można usunac rok urodzenia")
+
+    def __str__(self):
+        return f"{self.nazwisko}, {self.rok_urodzenia}"
+        # return f"{self.__nazwisko}, {self.__rok_urodzenia}"
