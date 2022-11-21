@@ -1,4 +1,5 @@
 class Osoba:
+    _ile = 4000
     __nazwisko: str
     __rok_urodzenia: int
 
@@ -35,3 +36,11 @@ class Osoba:
     def __str__(self):
         return f"{self.nazwisko}, {self.rok_urodzenia}"
         # return f"{self.__nazwisko}, {self.__rok_urodzenia}"
+
+    @classmethod
+    def get_ile(cls):
+        return cls._ile
+
+    @classmethod
+    def zwieksz_pobory(cls, ile_procent):
+        cls._ile += ile_procent/100 * cls._ile

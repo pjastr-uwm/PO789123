@@ -8,6 +8,9 @@ def main() -> None:
     print(o1.nazwisko)
     print(o1.rok_urodzenia)
     print(o1)
+    print(Osoba.get_ile())
+    Osoba.zwieksz_pobory(50)
+    print(Osoba.get_ile())
 
 
 if __name__ == "__main__":
