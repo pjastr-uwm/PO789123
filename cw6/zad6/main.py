@@ -7,6 +7,13 @@ def main() -> None:
     s2: Student = Student(456,"Jan","Kowalski")
     s2.student_data()
 
+    ## zadanie 7
+    print(type(Student)) ## to nie o to chodzilo
+    print(Student.__name__)
+    print(Student.__dict__)
+    print(Student.__module__)
+
+
 
 if __name__ == "__main__":
     main()
