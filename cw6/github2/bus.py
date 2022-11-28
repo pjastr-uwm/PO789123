@@ -9,4 +9,4 @@ class Bus(Car):
         self.seats = seats
 
     def __str__(self) -> str:
-        return super(Bus, self).__str__() + f" {self.seats}"
+        return super().__str__() + f" {self.seats}"

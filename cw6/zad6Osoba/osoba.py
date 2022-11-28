@@ -44,3 +44,44 @@ class Osoba:
     @classmethod
     def zwieksz_pobory(cls, ile_procent):
         cls._ile += ile_procent/100 * cls._ile
+
+
+class Pracownik(Osoba):
+    __rok_zatrudnienia: int
+    __pobory: int
+
+    __slots__ = ["__rok_zatrudnienia", "__pobory"]
+
+    def __init__(self,nazwisko: str, rok_urodzenia: int, rok_zatrudnienia: int, pobory: int) -> None:
+        super().__init__(nazwisko, rok_urodzenia)
+        self.__rok_zatrudnienia = rok_zatrudnienia
+        self.__pobory = pobory
+
+    @property
+    def rok_zatrudnienia(self) -> int:
+        return self.__rok_zatrudnienia
+
+    @rok_zatrudnienia.setter
+    def rok_zatrudnienia(self, value: int) -> None:
+        self.__rok_zatrudnienia = value
+
+    @rok_zatrudnienia.deleter
+    def rok_zatrudnienia(self) -> None:
+        raise AttributeError("Nie można usunac rok zatrudnienia")
+
+    @property
+    def pobory(self) -> int:
+        return self.__pobory
+
+    @pobory.setter
+    def pobory(self, value: int) -> None:
+        self.__pobory = value
+
+    @pobory.deleter
+    def pobory(self) -> None:
+        raise AttributeError("Nie można usunac pobory")
+
+    def __str__(self):
+        return f"{self.nazwisko}, {self.rok_urodzenia} {self.__rok_zatrudnienia} {self.__pobory}"
+
+
