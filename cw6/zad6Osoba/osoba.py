@@ -82,6 +82,6 @@ class Pracownik(Osoba):
         raise AttributeError("Nie można usunac pobory")
 
     def __str__(self):
-        return f"{self.nazwisko}, {self.rok_urodzenia} {self.__rok_zatrudnienia} {self.__pobory}"
+        return f"{self.nazwisko}, {self.rok_urodzenia} {self.rok_zatrudnienia} {self.pobory}"
 
 
