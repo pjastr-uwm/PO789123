@@ -2,7 +2,7 @@ package pl.uwm.wmii.lab9;
 
 import java.util.Scanner;
 
-public class Main {
+public class zad1a {
 
     public static void main(String[] args)
     {
