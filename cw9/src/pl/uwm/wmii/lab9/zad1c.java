@@ -11,7 +11,7 @@ public class zad1c {
         double temp=0;
         for(int i=0; i<n; i++)
         {
-            System.out.printf("Podaj liczbe nr %d\n: ",i+1);
+            System.out.printf("Podaj liczbe nr %d%n: ",i+1);
             temp+=Math.abs(input.nextDouble());
         }
         System.out.printf("Wynik: %f",temp);
