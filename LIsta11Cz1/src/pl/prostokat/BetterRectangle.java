@@ -6,8 +6,7 @@ class BetterRectangle extends Rectangle {
 
     public BetterRectangle(int x, int y, int width, int height)
     {
-        setLocation(x,y);
-        setSize(width,height);
+        super(x,y,width,height);
     }
 
     public int getPerimeter()
