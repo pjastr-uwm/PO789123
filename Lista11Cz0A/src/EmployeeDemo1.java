@@ -49,6 +49,18 @@ class Employee
         ++nextId;
     }
 
+    public Employee(String name, double salary, LocalDate hireDay)
+    {
+        this.name = name;
+        this.salary = salary;
+
+        this.hireDay = Date.from(hireDay.atStartOfDay(ZoneId.systemDefault()).toInstant());
+
+        // Dodane w stosunku do poprzedniej wersji
+        id = nextId;
+        ++nextId;
+    }
+
     public String getName()
     {
         return name;
