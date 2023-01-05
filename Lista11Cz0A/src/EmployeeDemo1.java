@@ -36,18 +36,7 @@ public class EmployeeDemo1
 
 class Employee
 {
-    public Employee(String name, double salary, int year, int month, int day)
-    {
-        this.name = name;
-        this.salary = salary;
 
-        LocalDate calendar = LocalDate.of(year, month - 1, day);
-        hireDay = Date.from(calendar.atStartOfDay(ZoneId.systemDefault()).toInstant());
-
-        // Dodane w stosunku do poprzedniej wersji
-        id = nextId;
-        ++nextId;
-    }
 
     public Employee(String name, double salary, LocalDate hireDay)
     {
@@ -59,6 +48,11 @@ class Employee
         // Dodane w stosunku do poprzedniej wersji
         id = nextId;
         ++nextId;
+    }
+
+    public Employee(String name, double salary, int year, int month, int day)
+    {
+        this(name,salary,LocalDate.of(year, month-1, day));
     }
 
     public String getName()
