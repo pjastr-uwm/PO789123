@@ -1,6 +1,7 @@
 import pl.uwm.wmii.kmmi.nazwisko.Osoba;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.Arrays;
 
 public class OsobaTest {
@@ -26,5 +27,13 @@ public class OsobaTest {
         {
             System.out.println(elem);
         }
+        System.out.println("Test ile");
+        for(Osoba elem: grupa)
+        {
+            System.out.printf("Lat: %d, Miesiecy: %d, Dni: %d%n", elem.ileLat(),
+                    elem.ileMiesiecy(), elem.ileDni());
+        }
+
+
     }
 }

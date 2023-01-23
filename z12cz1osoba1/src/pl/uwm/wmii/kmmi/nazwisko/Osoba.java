@@ -1,6 +1,7 @@
 package pl.uwm.wmii.kmmi.nazwisko;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
 public class Osoba implements Comparable<Osoba> {
@@ -39,6 +40,25 @@ public class Osoba implements Comparable<Osoba> {
         if (comparision != 0)
             return comparision;
         return this.dataUrodzenia.compareTo(o.dataUrodzenia);
+    }
+
+    public int ileLat()
+    {
+        LocalDate today = LocalDate.now();
+        Period temp = Period.between(dataUrodzenia,today);
+        return temp.getYears();
+    }
+    public int ileMiesiecy()
+    {
+        LocalDate today = LocalDate.now();
+        Period temp = Period.between(dataUrodzenia,today);
+        return temp.getMonths();
+    }
+    public int ileDni()
+    {
+        LocalDate today = LocalDate.now();
+        Period temp = Period.between(dataUrodzenia,today);
+        return temp.getDays();
     }
 
     private String nazwisko;
