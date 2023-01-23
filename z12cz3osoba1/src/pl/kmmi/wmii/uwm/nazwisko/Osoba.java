@@ -12,6 +12,14 @@ public class Osoba implements Comparable<Osoba>, Cloneable {
         this.dataUrodzenia=dataUrodzenia;
     }
 
+    public String getNazwisko() {
+        return this.nazwisko;
+    }
+
+    public LocalDate getDataUrodzenia() {
+        return this.dataUrodzenia;
+    }
+
     @Override
     public String toString()
     {
